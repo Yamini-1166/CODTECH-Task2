@@ -7,6 +7,7 @@
 ## Overview of the project
 
 ### Project: TEMPERATURE CONVERTER
+![Screenshot 2024-11-14 202625](https://github.com/user-attachments/assets/cf62eb8d-c745-4f97-ac1a-14fa4bf85f13)
 
 ### OBJECTIVE:-
 The objective of this C code is to create a Temperature Converter that allows users to convert temperatures between Celsius, Fahrenheit, and Kelvin. The program provides a menu for users to choose the type of conversion, takes the input temperature, and outputs the converted temperature in another scale based on the user's choice.
