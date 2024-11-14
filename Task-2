@@ -1,0 +1,84 @@
+#include <stdio.h>
+
+// Function prototypes
+float celsiusToFahrenheit(float celsius);
+float celsiusToKelvin(float celsius);
+float fahrenheitToCelsius(float fahrenheit);
+float fahrenheitToKelvin(float fahrenheit);
+float kelvinToCelsius(float kelvin);
+float kelvinToFahrenheit(float kelvin);
+
+int main() {
+    int choice;
+    float temperature, convertedTemperature;
+
+    printf("Temperature Converter\n");
+    printf("1. Celsius to Fahrenheit\n");
+    printf("2. Celsius to Kelvin\n");
+    printf("3. Fahrenheit to Celsius\n");
+    printf("4. Fahrenheit to Kelvin\n");
+    printf("5. Kelvin to Celsius\n");
+    printf("6. Kelvin to Fahrenheit\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    printf("Enter the temperature: ");
+    scanf("%f", &temperature);
+
+    switch (choice) {
+        case 1:
+            convertedTemperature = celsiusToFahrenheit(temperature);
+            printf("Temperature in Fahrenheit: %.2f\n", convertedTemperature);
+            break;
+        case 2:
+            convertedTemperature = celsiusToKelvin(temperature);
+            printf("Temperature in Kelvin: %.2f\n", convertedTemperature);
+            break;
+        case 3:
+            convertedTemperature = fahrenheitToCelsius(temperature);
+            printf("Temperature in Celsius: %.2f\n", convertedTemperature);
+            break;
+        case 4:
+            convertedTemperature = fahrenheitToKelvin(temperature);
+            printf("Temperature in Kelvin: %.2f\n", convertedTemperature);
+            break;
+        case 5:
+            convertedTemperature = kelvinToCelsius(temperature);
+            printf("Temperature in Celsius: %.2f\n", convertedTemperature);
+            break;
+        case 6:
+            convertedTemperature = kelvinToFahrenheit(temperature);
+            printf("Temperature in Fahrenheit: %.2f\n", convertedTemperature);
+            break;
+        default:
+            printf("Invalid choice!\n");
+            break;
+    }
+
+    return 0;
+}
+
+// Function definitions
+float celsiusToFahrenheit(float celsius) {
+    return (celsius * 9/5) + 32;
+}
+
+float celsiusToKelvin(float celsius) {
+    return celsius + 273.15;
+}
+
+float fahrenheitToCelsius(float fahrenheit) {
+    return (fahrenheit - 32) * 5/9;
+}
+
+float fahrenheitToKelvin(float fahrenheit) {
+    return (fahrenheit - 32) * 5/9 + 273.15;
+}
+
+float kelvinToCelsius(float kelvin) {
+    return kelvin - 273.15;
+}
+
+float kelvinToFahrenheit(float kelvin) {
+    return (kelvin - 273.15) * 9/5 + 32;
+}
